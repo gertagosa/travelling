@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveling</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(
+        179.4deg,
+        rgb(253, 240, 233) 2.2%,
+        rgb(255, 194, 203) 96.2%
+      );
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid plum;
+      background: white;
+      font-size: 20px;
+      border-radius: 6px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in-out;
+    }
+    button:hover {
+      background: plum;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .theme-button {
+      font-size: 12px;
+      background: black;
+      color: white;
+      padding: 5 8px;
+    }
+    .theme-button:hover {
+      color: black;
+      background: white;
+    }
+    .travel-intro-picture {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+    .travel-intro-picture:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+    .grid {
+      margin: 15px 0;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap: 20px;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .grid img:hover {
+      transform: scale(2);
+    }
+    .dark {
+      background: black;
+      color: white;
+    }
+
+    .dark .container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .dark a {
+      color: plum;
+    }
+  </style>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>“Travel is my therapy.” ...</h1>
+      <h2>Take only memories, leave only footprints. ...</h2>
+      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+        <img
+          src="http://static1.squarespace.com/static/5d5c37f683feb60001837bbe/5d5c38b51c4ff10001971907/624561db23718a1316f27b81/1649748136234/Getting+ready+for+travelling_1.jpg?format=1500w"
+          alt=""
+          class="travel-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://www.theblondeabroad.com/wp-content/uploads/2017/08/MGL1876-e1551185994554.jpg"
+          alt=""
+        />
+        <img
+          src="https://flockeo.com/app/uploads/2021/07/femme-perou.jpg"
+          alt=""
+        />
+        <img
+          src="https://thetravelbible.com/wp-content/uploads/2020/04/Solo-Travel-in-Nature-acbfea52bfaf.jpg"
+          alt=""
+        />
+        <img
+          src="https://deih43ym53wif.cloudfront.net/glacier-national-park-montana-usa-shutterstock_259741637_43563d27d8.jpeg"
+          alt=""
+        />
+      </div>
+      <p>
+        Travel is the movement of people between distant geographical locations.
+        Travel can be done by foot, bicycle, automobile, train, boat, bus,
+        airplane, ship or other means, with or without luggage, and can be one
+        way or round trip.[1] Travel can also include relatively short stays
+        between successive movements, as in the case of tourism.
+        <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+          <br />
+          <br />
+
+          🗺 Read on Wikipedia
+        </a>
+      </p>
+      <button>Travel</button>
+    </div>
+    <footer>Coded by Gerta Gosa</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
